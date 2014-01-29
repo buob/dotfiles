@@ -1,0 +1,20 @@
+[user]
+	name = Jake Buob
+	email = jake@mojotech.com
+[core]
+	editor = vim
+	exludesfile = /Users/jakebuob/.gitignore_global
+	excludesfile = /Users/jakebuob/.gitignore_global
+[merge]
+	tool = vimdiff
+[mergetool]
+	keepBackup = true
+[color]
+	ui = true
+[heroku]
+	account = personal
+[push]
+	default = current
+
+[alias]
+	tree = log --graph --pretty=oneline --abbrev-commit
