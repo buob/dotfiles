@@ -1,14 +1,24 @@
-export PATH=/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$PATH
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+  if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+  fi
+
+# Git branch in prompt.
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+export PATH=$PATH:/usr/local/bin
 
 export EDITOR='subl -w'
 
-export WEEK_START_DAY=:saturday
+export CLICOLOR=1
 
-source ~/.rvm/scripts/rvm
+export JAVASCRIPT_DRIVER_BROWSER=firefox
 
-PS1="[\W:]$ "
-alias rake="bundle exec rake"
+set -o vi
 
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
-fi
+export LSCOLORS=GxFxCxDxBxegedabagaced
