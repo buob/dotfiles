@@ -98,6 +98,7 @@ set noswapfile
 set nu
 set softtabstop=2
 set syntax
+colorscheme pablo
 
 " Toggle Vexplore with Ctrl-E
 function! ToggleVExplorer()
