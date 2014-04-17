@@ -1,4 +1,5 @@
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+autocmd BufWritePre * :%s/\s\+$//e
 
 " An example for a vimrc file.
 "
