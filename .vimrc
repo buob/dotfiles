@@ -16,11 +16,11 @@ set autochdir                                           " Change directory to th
 
 colorscheme pablo
 
-syntax on                       " syntax highlighting
+syntax on                                               " syntax highlighting
 
-set runtimepath^=~/.vim/bundle/ctrlp.vim        " add ctrl-p plugin
+set runtimepath^=~/.vim/bundle/ctrlp.vim                " add ctrl-p plugin
 
-autocmd BufWritePre * :%s/\s\+$//e          " delete trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e                      " delete trailing whitespace on save
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
