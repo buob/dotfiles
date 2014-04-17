@@ -1,3 +1,4 @@
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " An example for a vimrc file.
 "
