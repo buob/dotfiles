@@ -11,7 +11,7 @@ set hlsearch                                            " highlight search resul
 set autoindent                                          " make new lines indent to same as line before
 set textwidth=80                                        " set textwidth to 80 lines (for gq and stuff)
 set nu                                                  " line numbers
-set tabstop=4 shiftwidth=4 softtabstop=4 expandtab      " insert 4 spaces when hitting tab
+set tabstop=2 shiftwidth=2 softtabstop=2 expandtab      " insert 2 spaces when hitting tab
 set autochdir                                           " Change directory to the current buffer when opening files.
 
 colorscheme pablo
