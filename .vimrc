@@ -16,7 +16,7 @@ set autochdir                                           " Change directory to th
 
 colorscheme pablo
 
-syntax on                                               " syntax highlighting
+syntax enable                                           " syntax highlighting
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim                " add ctrl-p plugin
 
