@@ -78,6 +78,7 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'mileszs/ack.vim'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
