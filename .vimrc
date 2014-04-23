@@ -15,6 +15,9 @@ set tabstop=2 shiftwidth=2 softtabstop=2 expandtab      " insert 2 spaces when h
 set autochdir                                           " Change directory to the current buffer when opening files.
 set nowrap                                              " I hate wordwrap, make me scroll that shiz
 
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+
 colorscheme pablo
 
 syntax enable                                           " syntax highlighting
