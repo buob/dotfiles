@@ -12,7 +12,6 @@ set autoindent                                          " make new lines indent 
 set textwidth=80                                        " set textwidth to 80 lines (for gq and stuff)
 set nu                                                  " line numbers
 set tabstop=2 shiftwidth=2 softtabstop=2 expandtab      " insert 2 spaces when hitting tab
-set autochdir                                           " Change directory to the current buffer when opening files.
 set nowrap                                              " I hate wordwrap, make me scroll that shiz
 
 nmap <S-Enter> O<Esc>
