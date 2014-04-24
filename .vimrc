@@ -16,12 +16,12 @@ set nowrap                                              " I hate wordwrap, make 
 
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
+nnoremap <C-p> :Unite file_rec/async<cr>
+nnoremap <space>/ :Unite grep:.<cr>
 
 colorscheme pablo
 
 syntax enable                                           " syntax highlighting
-
-set runtimepath^=~/.vim/bundle/ctrlp.vim                " add ctrl-p plugin
 
 autocmd BufWritePre * :%s/\s\+$//e                      " delete trailing whitespace on save
 
@@ -55,12 +55,14 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'mileszs/ack.vim'
+
+NeoBundle 'rking/ag.vim'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'Shougo/vimproc.vim', { 'build' : { 'mac' : 'make -f make_mac.mak' }}
+NeoBundle 'Shougo/unite.vim'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -75,3 +77,12 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 "End NeoBundle Scripts-------------------------
+
+" configure unite
+" Use ag for search
+
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
