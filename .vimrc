@@ -17,6 +17,7 @@ set nowrap                                              " I hate wordwrap, make 
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 nnoremap <C-p> :Unite file_rec/async<cr>
+nnoremap <C-k> :Unite buffer<cr>
 nnoremap <space>/ :Unite grep:.<cr>
 
 colorscheme pablo
