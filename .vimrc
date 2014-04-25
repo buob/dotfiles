@@ -60,6 +60,7 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'kchmck/vim-coffee-script'
 
+NeoBundle 'vim-scripts/bufkill.vim'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Shougo/vimproc.vim', { 'build' : { 'mac' : 'make -f make_mac.mak' }}
