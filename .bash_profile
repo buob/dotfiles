@@ -19,6 +19,12 @@ export CLICOLOR=1
 
 export JAVASCRIPT_DRIVER_BROWSER=firefox
 
+export DOCKER_HOST=tcp://localhost:4243
+
 set -o vi
 
 export LSCOLORS=GxFxCxDxBxegedabagaced
+
+alias grom="git rebase origin/master"
+alias girom="git rebase -i origin/master"
+alias griom="girom"

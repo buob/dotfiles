@@ -1,2 +1,8 @@
 .DS_Store
 .DS_Store?
+
+zeus.json
+custom_plan.rb
+
+.vagrant
+npm-debug.log
