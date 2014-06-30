@@ -19,6 +19,8 @@ export CLICOLOR=1
 
 export JAVASCRIPT_DRIVER_BROWSER=firefox
 
+export DOCKER_HOST=tcp://localhost:4243
+
 set -o vi
 
 export LSCOLORS=GxFxCxDxBxegedabagaced
