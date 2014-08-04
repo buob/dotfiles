@@ -21,7 +21,12 @@ nnoremap <C-k> :Unite buffer<cr>
 nnoremap <space>/ :Unite grep:.<cr>
 nnoremap <Leader>q :Bdelete<cr>
 nnoremap <Leader><Leader> :b1<cr>
+nnoremap <Space> <PageDown>
+nnoremap - <PageUp>
 imap <buffer> <C-r>   <Plug>(unite_redraw)
+
+" remap ; to : so you can just do ;w instead of <Shift-; w>
+nnoremap ; :
 
 " normalize pane switching when inside tmux
 if exists('$TMUX')
