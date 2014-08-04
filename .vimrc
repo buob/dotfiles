@@ -14,7 +14,7 @@ set nu                                                  " line numbers
 set tabstop=2 shiftwidth=2 softtabstop=2 expandtab      " insert 2 spaces when hitting tab
 set nowrap                                              " I hate wordwrap, make me scroll that shiz
 
-nnoremap <C-p> :Unite file_rec/async<cr>
+nnoremap <C-p> :Unite -start-insert file_rec/async<cr>
 nnoremap <C-k> :Unite buffer<cr>
 nnoremap <space>/ :Unite grep:.<cr>
 
