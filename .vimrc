@@ -83,6 +83,7 @@ NeoBundleCheck
 "End NeoBundle Scripts-------------------------
 
 " configure unite
+
 " Use ag for search
 
 if executable('ag')
