@@ -62,7 +62,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'wavded/vim-stylus'
 
-NeoBundle 'vim-scripts/bufkill.vim'
+NeoBundle 'moll/vim-bbye'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Shougo/vimproc.vim', { 'build' : { 'mac' : 'make -f make_mac.mak' }}
