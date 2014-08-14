@@ -17,6 +17,7 @@ set nowrap                                              " I hate wordwrap, make 
 let mapleader = ","
 
 nnoremap <Leader>b :Unite buffer<cr>
+nnoremap <Leader>c :noh<cr>
 nnoremap <Leader>f :Unite -start-insert file_rec/async<cr>
 nnoremap <Leader>/ :Unite grep:.<cr>
 nnoremap <Leader>q :Bdelete<cr>
