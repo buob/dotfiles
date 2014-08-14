@@ -100,6 +100,7 @@ NeoBundle 'groenewege/vim-less'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'wavded/vim-stylus'
+NeoBundle 'tpope/vim-haml'
 
 NeoBundle 'moll/vim-bbye'
 NeoBundle 'rking/ag.vim'
