@@ -21,6 +21,10 @@ nnoremap <Leader>c :noh<cr>
 nnoremap <Leader>f :Unite -start-insert file_rec/async<cr>
 nnoremap <Leader>/ :Unite grep:.<cr>
 nnoremap <Leader>q :Bdelete<cr>
+nnoremap <Leader>gb :Gblame<cr>
+nnoremap <Leader>gd :Gdiff<cr>
+nnoremap <Leader>gs :Gstatus<cr>
+nnoremap <Leader>gr :Gread<cr>
 nnoremap <Leader><Leader> :b1<cr>
 nnoremap <Space> <PageDown>
 nnoremap - <PageUp>
