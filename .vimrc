@@ -16,10 +16,15 @@ set nowrap                                              " I hate wordwrap, make 
 
 let mapleader = ","
 
-nnoremap <C-k> :Unite buffer<cr>
-nnoremap <Leader>p :Unite -start-insert file_rec/async<cr>
-nnoremap <space>/ :Unite grep:.<cr>
+nnoremap <Leader>b :Unite buffer<cr>
+nnoremap <Leader>c :noh<cr>
+nnoremap <Leader>f :Unite -start-insert file_rec/async<cr>
+nnoremap <Leader>/ :Unite grep:.<cr>
 nnoremap <Leader>q :Bdelete<cr>
+nnoremap <Leader>gb :Gblame<cr>
+nnoremap <Leader>gd :Gdiff<cr>
+nnoremap <Leader>gs :Gstatus<cr>
+nnoremap <Leader>gr :Gread<cr>
 nnoremap <Leader><Leader> :b1<cr>
 nnoremap <Space> <PageDown>
 nnoremap - <PageUp>
@@ -95,6 +100,7 @@ NeoBundle 'groenewege/vim-less'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'wavded/vim-stylus'
+NeoBundle 'tpope/vim-haml'
 
 NeoBundle 'moll/vim-bbye'
 NeoBundle 'rking/ag.vim'
