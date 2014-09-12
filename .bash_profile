@@ -28,3 +28,4 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 alias grom="git rebase origin/master"
 alias girom="git rebase -i origin/master"
 alias griom="girom"
+alias g="ghwd"
