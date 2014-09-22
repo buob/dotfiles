@@ -104,6 +104,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-fireplace'
 NeoBundle 'vim-scripts/paredit.vim'
 
 NeoBundle 'moll/vim-bbye'
@@ -125,6 +126,13 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 "End NeoBundle Scripts-------------------------
+
+" configure fireplace
+
+map crr :Require<CR>:e<CR>
+map cra :Require!<CR>:e<CR>
+
+map cxs :echom fireplace#eval('(user/serve)')<CR>
 
 " configure unite
 
