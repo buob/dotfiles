@@ -104,6 +104,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'tpope/vim-haml'
+NeoBundle 'vim-scripts/paredit.vim'
 
 NeoBundle 'moll/vim-bbye'
 NeoBundle 'rking/ag.vim'
