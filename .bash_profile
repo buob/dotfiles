@@ -30,3 +30,6 @@ alias girom="git rebase -i origin/master"
 alias griom="girom"
 alias g="ghwd"
 alias t="tree -C"
+
+# added by Anaconda 2.0.1 installer
+export PATH="/Users/jakebuob/anaconda/bin:$PATH"
