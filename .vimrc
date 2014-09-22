@@ -3,6 +3,8 @@ set nobackup                                            " do not keep a backup f
 set nowritebackup                                       " Prevent 'jumping files'
 set noswapfile                                          " no swap files...?
 set history=50                                          " keep 50 lines of command line history
+set undofile                                            " save undos after file closes
+set undodir=~/.vim/undos                                " save udo histories in this file
 set ruler                                               " show the cursor position all the time
 set showcmd                                             " display incomplete commands
 set incsearch                                           " do incremental searching
