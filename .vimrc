@@ -3,6 +3,9 @@ set nobackup                                            " do not keep a backup f
 set nowritebackup                                       " Prevent 'jumping files'
 set noswapfile                                          " no swap files...?
 set history=50                                          " keep 50 lines of command line history
+set undofile                                            " save undos after file closes
+set undodir=~/.vim/undos                                " save udo histories in this file
+set clipboard=unnamed                                   " save yanks to pbcopy
 set ruler                                               " show the cursor position all the time
 set showcmd                                             " display incomplete commands
 set incsearch                                           " do incremental searching
@@ -101,6 +104,8 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-fireplace'
+NeoBundle 'vim-scripts/paredit.vim'
 
 NeoBundle 'moll/vim-bbye'
 NeoBundle 'rking/ag.vim'
@@ -121,6 +126,13 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 "End NeoBundle Scripts-------------------------
+
+" configure fireplace
+
+map crr :Require<CR>:e<CR>
+map cra :Require!<CR>:e<CR>
+
+map cxs :echom fireplace#eval('(user/serve)')<CR>
 
 " configure unite
 
