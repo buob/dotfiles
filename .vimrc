@@ -138,6 +138,8 @@ au FileType unite call s:unite_settings()
 
 function! s:unite_settings()
   imap <buffer> <C-r>   <Plug>(unite_redraw)
+
+  nmap <buffer> <Esc> <Plug>(unite_exit)
 endfunction
 
 " Use ag for search
