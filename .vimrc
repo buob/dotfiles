@@ -31,7 +31,6 @@ nnoremap <Leader>gr :Gread<cr>
 nnoremap <Leader><Leader> :b1<cr>
 nnoremap <Space> <PageDown>
 nnoremap - <PageUp>
-imap <buffer> <C-r>   <Plug>(unite_redraw)
 
 " remap ; to : so you can just do ;w instead of <Shift-; w>
 nnoremap ; :
@@ -135,6 +134,11 @@ map cra :Require!<CR>:e<CR>
 map cxs :echom fireplace#eval('(user/serve)')<CR>
 
 " configure unite
+au FileType unite call s:unite_settings()
+
+function! s:unite_settings()
+  imap <buffer> <C-r>   <Plug>(unite_redraw)
+endfunction
 
 " Use ag for search
 
