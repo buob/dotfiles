@@ -95,9 +95,6 @@ call neobundle#begin(expand('/Users/jakebuob/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'digitaltoad/vim-jade'
@@ -105,7 +102,6 @@ NeoBundle 'wavded/vim-stylus'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'tpope/vim-fireplace'
 NeoBundle 'vim-scripts/paredit.vim'
-NeoBundle 'guns/vim-sexp'
 NeoBundle 'tfnico/vim-gradle'
 NeoBundle 'tpope/vim-surround'
 
@@ -114,9 +110,6 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Shougo/vimproc.vim', { 'build' : { 'mac' : 'make -f make_mac.mak' }}
 NeoBundle 'Shougo/unite.vim'
-
-" You can specify revision/branch/tag.
-NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
 " Required:
 call neobundle#end()
