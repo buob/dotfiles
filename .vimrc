@@ -94,22 +94,29 @@ call neobundle#begin(expand('/Users/jakebuob/.vim/bundle'))
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" My Bundles here:
+" Process
+NeoBundle 'tpope/vim-surround' " surround arbitrary objects with arbitrary wrappers
+NeoBundle 'moll/vim-bbye' " Delete buffers without quitting pane
+NeoBundle 'tpope/vim-fugitive' " Git blame & reset from vim file
+
+" Unite (searching & buffer management)
+NeoBundle 'Shougo/unite.vim' " find in files, fuzzy search, etc. wrapper
+NeoBundle 'Shougo/vimproc.vim', { 'build' : { 'mac' : 'make -f make_mac.mak' }} " required for async
+NeoBundle 'rking/ag.vim' " silver searcher, faster more powerful `ack`; for use in unite
+
+" Syntax Highlighting
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'tpope/vim-haml'
-NeoBundle 'tpope/vim-fireplace'
-NeoBundle 'vim-scripts/paredit.vim'
 NeoBundle 'tfnico/vim-gradle'
-NeoBundle 'tpope/vim-surround'
 
-NeoBundle 'moll/vim-bbye'
-NeoBundle 'rking/ag.vim'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'Shougo/vimproc.vim', { 'build' : { 'mac' : 'make -f make_mac.mak' }}
-NeoBundle 'Shougo/unite.vim'
+" Language Specific Plugins
+
+"" Clojure
+NeoBundle 'tpope/vim-fireplace' " Run clojure REPL inside vim
+NeoBundle 'vim-scripts/paredit.vim' " Prevents missing quotes/parens, provides slurping/barfing
 
 " Required:
 call neobundle#end()
