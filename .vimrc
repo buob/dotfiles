@@ -31,7 +31,6 @@ nnoremap <Leader>gr :Gread<cr>
 nnoremap <Leader><Leader> :b1<cr>
 nnoremap <Space> <PageDown>
 nnoremap - <PageUp>
-imap <buffer> <C-r>   <Plug>(unite_redraw)
 
 " remap ; to : so you can just do ;w instead of <Shift-; w>
 nnoremap ; :
@@ -106,6 +105,9 @@ NeoBundle 'wavded/vim-stylus'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'tpope/vim-fireplace'
 NeoBundle 'vim-scripts/paredit.vim'
+NeoBundle 'guns/vim-sexp'
+NeoBundle 'tfnico/vim-gradle'
+NeoBundle 'tpope/vim-surround'
 
 NeoBundle 'moll/vim-bbye'
 NeoBundle 'rking/ag.vim'
@@ -135,11 +137,20 @@ map cra :Require!<CR>:e<CR>
 map cxs :echom fireplace#eval('(user/serve)')<CR>
 
 " configure unite
+au FileType unite call s:unite_settings()
+
+function! s:unite_settings()
+  imap <buffer> <C-r>   <Plug>(unite_redraw)
+
+  nmap <buffer> <Esc> <Plug>(unite_exit)
+endfunction
 
 " Use ag for search
 
 if executable('ag')
   let g:unite_source_grep_command = 'ag'
+  let g:unite_ignore_source_files = ['node_modules', 'bower_components']
   let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
   let g:unite_source_grep_recursive_opt = ''
+  let g:unite_source_rec_async_command='ag --nocolor --nogroup --ignore ".git" --hidden -g ""'
 endif
