@@ -92,6 +92,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Schemes
 NeoBundle 'buob/flatlandia', 'jb/256'
+NeoBundle 'buob/soda.vim', 'jb/updates'
 
 " Process
 NeoBundle 'tpope/vim-surround' " surround arbitrary objects with arbitrary wrappers
@@ -131,7 +132,7 @@ NeoBundleCheck
 "End NeoBundle Scripts-------------------------
 
 syntax enable
-colorscheme flatlandia
+colorscheme soda
 
 " configure fireplace
 
