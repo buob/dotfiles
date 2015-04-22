@@ -111,6 +111,7 @@ NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'tfnico/vim-gradle'
+NeoBundle 'derekwyatt/vim-scala'
 
 " Language Specific Plugins
 
