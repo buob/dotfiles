@@ -46,3 +46,4 @@ gifify() {
 
 # added by Anaconda 2.0.1 installer
 export PATH="/Users/jakebuob/anaconda/bin:$PATH"
+source /Users/jakebuob/.rvm/scripts/rvm
