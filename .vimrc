@@ -16,6 +16,7 @@ set textwidth=0                                         " stop wrapping my shit
 set nu                                                  " line numbers
 set tabstop=2 shiftwidth=2 softtabstop=2 expandtab      " insert 2 spaces when hitting tab
 set nowrap                                              " I hate wordwrap, make me scroll that shiz
+set laststatus=2                                        " Show statusline always (not only when 2+ windows)
 
 let mapleader = ","
 
