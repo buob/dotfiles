@@ -61,10 +61,6 @@ else
   nnoremap <C-h> <C-w><C-h>
 endif
 
-colorscheme pablo
-
-syntax enable                                           " syntax highlighting
-
 autocmd BufWritePre * :%s/\s\+$//e                      " delete trailing whitespace on save
 
 " Convenient command to see the difference between the current buffer and the
@@ -93,6 +89,9 @@ call neobundle#begin(expand('/Users/jakebuob/.vim/bundle'))
 " Let NeoBundle manage NeoBundle
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Schemes
+NeoBundle 'buob/flatlandia', 'jb/256'
 
 " Process
 NeoBundle 'tpope/vim-surround' " surround arbitrary objects with arbitrary wrappers
@@ -130,6 +129,9 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 "End NeoBundle Scripts-------------------------
+
+syntax enable
+colorscheme flatlandia
 
 " configure fireplace
 
