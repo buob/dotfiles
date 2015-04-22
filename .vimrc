@@ -96,6 +96,7 @@ NeoBundle 'buob/flatlandia', 'jb/256'
 NeoBundle 'buob/soda.vim', 'jb/updates'
 
 " Process
+NeoBundle 'bling/vim-airline' " Nicer Status line
 NeoBundle 'tpope/vim-surround' " surround arbitrary objects with arbitrary wrappers
 NeoBundle 'moll/vim-bbye' " Delete buffers without quitting pane
 NeoBundle 'tpope/vim-fugitive' " Git blame & reset from vim file
@@ -134,6 +135,11 @@ NeoBundleCheck
 
 syntax enable
 colorscheme soda
+
+" configure airline
+
+let g:airline_powerline_fonts = 2
+let g:airline_theme='flatlandia'
 
 " configure fireplace
 
