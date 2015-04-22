@@ -98,6 +98,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'tpope/vim-surround' " surround arbitrary objects with arbitrary wrappers
 NeoBundle 'moll/vim-bbye' " Delete buffers without quitting pane
 NeoBundle 'tpope/vim-fugitive' " Git blame & reset from vim file
+NeoBundle 'airblade/vim-gitgutter' " Show git diff symbols in gutter
 
 " Unite (searching & buffer management)
 NeoBundle 'Shougo/unite.vim' " find in files, fuzzy search, etc. wrapper
