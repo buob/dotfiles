@@ -10,6 +10,8 @@ export PS1=" 😒  \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] ~ "
 
 export PATH=$PATH:/usr/local/bin
 
+export PATH=/user/local/mysql/bin:$PATH
+
 export EDITOR='vim'
 
 export CLICOLOR=1
