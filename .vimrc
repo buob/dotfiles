@@ -62,6 +62,7 @@ else
   nnoremap <C-h> <C-w><C-h>
 endif
 
+autocmd!
 autocmd BufWritePre * :%s/\s\+$//e                      " delete trailing whitespace on save
 
 " Convenient command to see the difference between the current buffer and the
