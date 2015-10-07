@@ -136,6 +136,9 @@ NeoBundle 'wavded/vim-stylus'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'derekwyatt/vim-scala'
 
+" associate *.boot with clojure filetype
+au BufRead,BufNewFile *.boot setfiletype clojure
+
 " Language Specific Plugins
 
 "" Clojure
