@@ -140,6 +140,10 @@ NeoBundle 'derekwyatt/vim-scala'
 au BufRead,BufNewFile *.boot setfiletype clojure
 
 " Language Specific Plugins
+" (syntax highlighting et al)
+
+" Slim
+NeoBundle 'slim-template/vim-slim'
 
 "" Clojure
 NeoBundle 'tpope/vim-fireplace' " Run clojure REPL inside vim
