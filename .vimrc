@@ -109,20 +109,6 @@ NeoBundle 'Shougo/unite.vim' " find in files, fuzzy search, etc. wrapper
 NeoBundle 'Shougo/vimproc.vim', { 'build' : { 'mac' : 'make -f make_mac.mak' }} " required for async
 NeoBundle 'rking/ag.vim' " silver searcher, faster more powerful `ack`; for use in unite
 
-" Syntax
-NeoBundle 'scrooloose/syntastic'
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_ruby_checkers=['rubocop']
-
 " Formatting
 NeoBundle 'dhruvasagar/vim-table-mode'
 let g:table_mode_corner_corner="+"
