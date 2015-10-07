@@ -108,6 +108,11 @@ NeoBundle 'Shougo/unite.vim' " find in files, fuzzy search, etc. wrapper
 NeoBundle 'Shougo/vimproc.vim', { 'build' : { 'mac' : 'make -f make_mac.mak' }} " required for async
 NeoBundle 'rking/ag.vim' " silver searcher, faster more powerful `ack`; for use in unite
 
+" Formatting
+NeoBundle 'dhruvasagar/vim-table-mode'
+let g:table_mode_corner_corner="+"
+let g:table_mode_header_fillchar="="
+
 " Syntax Highlighting
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'kchmck/vim-coffee-script'
