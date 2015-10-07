@@ -154,12 +154,12 @@ NeoBundleCheck
 "End NeoBundle Scripts-------------------------
 
 syntax enable
-colorscheme soda
+colorscheme flatlandia
+let g:airline_theme='flatlandia'
 
 " configure airline
 
 let g:airline_powerline_fonts = 2
-let g:airline_theme='flatlandia'
 
 " configure fireplace
 
