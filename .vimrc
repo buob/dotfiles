@@ -72,6 +72,7 @@ if !exists(":DiffOrig")
           \ | wincmd p | diffthis
 endif
 
+au BufRead,BufNewFile *.edn set filetype=clojure
 
 " Default to tree mode
 let g:netrw_liststyle=3
