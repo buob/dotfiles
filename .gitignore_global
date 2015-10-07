@@ -6,3 +6,5 @@ custom_plan.rb
 
 .vagrant
 npm-debug.log
+
+.agignore
