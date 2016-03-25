@@ -8,3 +8,16 @@ custom_plan.rb
 npm-debug.log
 
 .agignore
+
+# Emacs stuff
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# tern stuff
+.tern-port

@@ -2,9 +2,8 @@
 
 Install dependencies:
 ```
- $ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
- $ brew install the_silver_searcher
- $ brew install reattach-to-user-namespace
+ $ brew install ag
+ $ npm install -g jslint
 ```
 
 Then make symlinks to dotfiles:
