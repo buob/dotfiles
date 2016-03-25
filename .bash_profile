@@ -18,7 +18,11 @@ export CLICOLOR=1
 
 export JAVASCRIPT_DRIVER_BROWSER=firefox
 
-export DOCKER_HOST=tcp://localhost:4243
+export DOCKER_HOST=tcp://192.168.59.103:2375
+unset DOCKER_CERT_PATH
+unset DOCKER_TLS_VERIFY
+
+export VBOX_HOME=/Applications/VirtualBox.app/Contents/MacOS
 
 set -o vi
 
@@ -44,6 +48,9 @@ gifify() {
   fi
 }
 
-# added by Anaconda 2.0.1 installer
-export PATH="/Users/jakebuob/anaconda/bin:$PATH"
-source /Users/jakebuob/.rvm/scripts/rvm
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
