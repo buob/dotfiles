@@ -6,12 +6,10 @@ Install dependencies:
  $ npm install -g jslint
 ```
 
-Then make symlinks to dotfiles:
+Then make symlinks to dotfiles (in whatever folder you prefer):
 ```
-cd ~
 git clone https://github.com/buob/dotfiles.git
-mv dotfiles .dotfiles
-cd .dotfiles
+cd dotfiles
 chmod +x makesymlinks.sh
 ./makesymlinks.sh
 ```
