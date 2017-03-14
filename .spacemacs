@@ -18,6 +18,10 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     ruby
+     ansible
+     sql
+     yaml
      auto-completion
      emacs-lisp
      emoji
@@ -32,7 +36,6 @@ values."
      git
      shell
      themes-megapack
-     evil-cleverparens
      (version-control :variables
                       version-control-diff-tool 'diff-hl
                       version-control-global-margin t))
@@ -43,6 +46,7 @@ values."
    dotspacemacs-additional-packages
    '(
      stylus-mode
+     yasnippet
      discover-my-major)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
@@ -203,7 +207,7 @@ values."
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
-   dotspacemacs-line-numbers 1
+   dotspacemacs-line-numbers t
    ;; If non-nil smartparens-strict-mode will be enabled in programming modes.
    ;; (default nil)
    dotspacemacs-smartparens-strict-mode 1
@@ -227,7 +231,7 @@ values."
    ;; `trailing' to delete only the whitespace at end of lines, `changed'to
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
-   dotspacemacs-whitespace-cleanup "trailing"
+   dotspacemacs-whitespace-cleanup "all"
    ))
 
 (defun dotspacemacs/user-init ()
@@ -237,31 +241,71 @@ any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
   )
 
+;; Indentation from
+;; http://blog.binchen.org/posts/easy-indentation-setup-in-emacs-for-web-development.html
+(defun my-setup-indent (n)
+  ;; web development
+  (setq coffee-tab-width n) ; coffeescript
+  (setq javascript-indent-level n) ; javascript-mode
+  (setq js-indent-level n) ; js-mode
+  (setq js2-basic-offset n) ; js2-mode
+  (setq web-mode-markup-indent-offset n) ; web-mode, html tag in html file
+  (setq web-mode-css-indent-offset n) ; web-mode, css in html file
+  (setq web-mode-code-indent-offset n) ; web-mode, js code in html file
+  (setq css-indent-offset n) ; css-mode
+  )
+
+;; ;; js2-mode
+;; js-indent-level 2
+;; js2-basic-offset 2
+;; ;; web-mode
+;; css-indent-offset 2
+;; web-mode-sql-indent-offset 2
+;; web-mode-markup-indent-offset 2
+;; web-mode-css-indent-offset 2
+;; web-mode-code-indent-offset 2
+;; web-mode-attr-indent-offset 2
+
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
-  (add-hook 'smartparens-enabled-hook #'spacemacs/toggle-evil-cleverparens-on)
-  (add-hook 'smartparens-disabled-hook #'spacemacs/toggle-evil-cleverparens-off)
-  (add-hook 'react-mode-hook 'js2-mode-hide-warnings-and-errors)
-  (add-hook 'javascript-mode-hook 'js2-mode-hide-warnings-and-errors)
+  ;; (add-hook 'react-mode-hook 'js2-mode-hide-warnings-and-errors)
+  ;; (add-hook 'javascript-mode-hook 'js2-mode-hide-warnings-and-errors)
 
-  (setq-default truncate-lines t
-                ;; js2-mode
-                js-indent-level 2
-                js2-basic-offset 2
-                ;; web-mode
-                css-indent-offset 2
-                web-mode-sql-indent-offset 2
-                web-mode-markup-indent-offset 2
-                web-mode-css-indent-offset 2
-                web-mode-code-indent-offset 2
-                web-mode-attr-indent-offset 2)
+  (setq-default truncate-lines t)
+  (setq require-final-newline t)
+  (setq mode-require-final-newline t)
 
-  (with-eval-after-load 'web-mode
-    (add-to-list 'web-mode-indentation-params '("lineup-args" . nil))
-    (add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
-    (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil)))
+  (my-setup-indent 2)
+
+  ;; (with-eval-after-load 'web-mode
+  ;;   (add-to-list 'web-mode-indentation-params '("lineup-args" . nil))
+  ;;   (add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
+  ;;   (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil)))
+
+  (add-to-list 'yas-snippet-dirs "~/repos/yasnippet-snippets")
+  (add-to-list 'yas-snippet-dirs "~/.emacs.d/private/snippets")
+  (yas-global-mode 1)
+
+  (setq dotspacemacs-configuration-layers
+        '((auto-completion :variables
+                           auto-completion-enable-snippets-in-popup t)))
+
+  (add-hook 'css-mode-hook 'emmet-mode)
+  (add-hook 'html-mode-hook 'emmet-mode)
+  (add-hook 'sgml-mode-hook 'emmet-mode)
+  (setq emmet-move-cursor-between-quotes t)
+  (setq emmet-expand-jsx-className? t)
+  (setq emmet-self-closing-tag-style " /")
+
+  (add-hook 'after-init-hook 'global-company-mode)
+
+	;; setup files ending in “.php” to open in web-mode
+	(add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
+
+  ;; setup files ending in ".apib" to open in markdown-mode
+	(add-to-list 'auto-mode-alist '("\\.apib\\'" . markdown-mode))
 
   (global-set-key (kbd "s-/") 'spacemacs/comment-or-uncomment-lines))
 
