@@ -57,6 +57,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+export NODE_ENV=development
 export PATH="/usr/local/sbin:$PATH"
 
 export NVM_DIR="/Users/jakebuob/.nvm"
