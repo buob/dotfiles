@@ -32,7 +32,7 @@ alias grom="git rebase origin/master"
 alias girom="git rebase -i origin/master"
 alias griom="girom"
 alias g="ghwd"
-alias t="tree -C"
+alias t="tree -C -I node_modules"
 
 gifify() {
   if [[ -n "$1" ]]; then
