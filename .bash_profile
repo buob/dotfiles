@@ -56,3 +56,4 @@ export PATH="/usr/local/heroku/bin:$PATH"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
