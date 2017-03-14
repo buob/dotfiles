@@ -2,7 +2,7 @@
 	name = Jake Buob
 	email = jake@teamgantt.com
 [core]
-	editor = emacs
+	editor = vim
 	excludesfile = /Users/jakebuob/.gitignore_global
 [merge]
 	tool = vimdiff
