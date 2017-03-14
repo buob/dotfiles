@@ -12,6 +12,8 @@ export PATH=$PATH:/usr/local/bin
 
 export PATH=/usr/local/mysql/bin:$PATH
 
+export PATH=$PATH:~/.composer/vendor/bin
+
 export EDITOR='vim'
 
 export CLICOLOR=1
