@@ -14,6 +14,7 @@
 	default = current
 [alias]
 	tree = log --graph --all --decorate --pretty=oneline --abbrev-commit
+	amend = commit -a --amend -C head
 [rebase]
   autosquash = true
   autostash = true
