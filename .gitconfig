@@ -16,8 +16,8 @@
 	tree = log --graph --all --decorate --pretty=oneline --abbrev-commit
 	amend = commit -a --amend -C head
 [rebase]
-  autosquash = true
-  autostash = true
+	autosquash = true
+	autostash = true
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
