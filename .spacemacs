@@ -31,33 +31,27 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     ruby
-     ansible
-     sql
+     elixir
+     nginx
      yaml
+     markdown
+     javascript
+     osx
+     helm
      auto-completion
      emacs-lisp
-     emoji
-     markdown
-     syntax-checking
-     javascript
-     react
-     osx
      git
-     shell
-     themes-megapack
-     (version-control :variables
-                      version-control-diff-tool 'diff-hl
-                      version-control-global-margin t))
+     react
+     )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages
    '(
-     stylus-mode
-     yasnippet
-     discover-my-major)
+     apib-mode
+     editorconfig
+     )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -129,7 +123,8 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(flatland)
+   dotspacemacs-themes '(spacemacs-dark
+                         spacemacs-light)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
@@ -316,42 +311,19 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  (setq js2-strict-missing-semi-warning nil)
+  (setq js2-strict-inconsistent-return-warning nil)
+  (setq js2-strict-trailing-comma-warning nil)
+  (add-hook 'hack-local-variables-hook (lambda () (setq truncate-lines t)))
+  (my-setup-indent 2)
+  (autoload 'apib-mode "apib-mode"
+    "Major mode for editing API Blueprint files" t)
+  (add-to-list 'auto-mode-alist '("\\.apib\\'" . apib-mode))
   )
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
-
-  (setq-default truncate-lines t)
-  (setq require-final-newline t)
-  (setq mode-require-final-newline t)
-
-  (my-setup-indent 2)
-
-  (add-to-list 'yas-snippet-dirs "~/repos/yasnippet-snippets")
-  (add-to-list 'yas-snippet-dirs "~/.emacs.d/private/snippets")
-  (yas-global-mode 1)
-
-  (setq dotspacemacs-configuration-layers
-        '((auto-completion :variables
-                           auto-completion-enable-snippets-in-popup t)))
-
-  (add-hook 'css-mode-hook 'emmet-mode)
-  (add-hook 'html-mode-hook 'emmet-mode)
-  (add-hook 'sgml-mode-hook 'emmet-mode)
-  (setq emmet-move-cursor-between-quotes t)
-  (setq emmet-expand-jsx-className? t)
-  (setq emmet-self-closing-tag-style " /")
-
-  (add-hook 'after-init-hook 'global-company-mode)
-
-	;; setup files ending in “.php” to open in web-mode
-	(add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
-
-  ;; setup files ending in ".apib" to open in markdown-mode
-	(add-to-list 'auto-mode-alist '("\\.apib\\'" . markdown-mode))
-
-  (global-set-key (kbd "s-/") 'spacemacs/comment-or-uncomment-lines))
 layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
