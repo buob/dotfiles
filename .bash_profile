@@ -20,10 +20,6 @@ export CLICOLOR=1
 
 export JAVASCRIPT_DRIVER_BROWSER=firefox
 
-export DOCKER_HOST=tcp://192.168.59.103:2375
-unset DOCKER_CERT_PATH
-unset DOCKER_TLS_VERIFY
-
 export VBOX_HOME=/Applications/VirtualBox.app/Contents/MacOS
 
 set -o vi
