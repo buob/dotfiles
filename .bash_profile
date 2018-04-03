@@ -55,6 +55,7 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 export NODE_ENV=development
 export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/.fastlane/bin/fastlane_lib:$PATH"
 
 export NVM_DIR="/Users/jakebuob/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
