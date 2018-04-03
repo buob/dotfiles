@@ -59,3 +59,11 @@ export PATH="$HOME/.fastlane/bin/fastlane_lib:$PATH"
 
 export NVM_DIR="/Users/jakebuob/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+alias mongo.start='mongod --config /usr/local/etc/mongod.conf'
+alias mongo.stop='killall mongod'
+alias nginx.start='sudo nginx'
+alias nginx.stop='sudo nginx -s stop'
+alias nginx.reload='sudo nginx -s reload'
+alias redis.start='redis-server /usr/local/etc/redis.conf'
+alias redis.stop='killall redis-server'
