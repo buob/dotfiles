@@ -39,9 +39,6 @@ values."
      emacs-lisp
      emoji
      markdown
-     ;; org
-     ;; evernote
-     ;; spell-checking
      syntax-checking
      javascript
      react
@@ -312,16 +309,6 @@ values."
   (setq css-indent-offset n) ; css-mode
   )
 
-;; ;; js2-mode
-;; js-indent-level 2
-;; js2-basic-offset 2
-;; ;; web-mode
-;; css-indent-offset 2
-;; web-mode-sql-indent-offset 2
-;; web-mode-markup-indent-offset 2
-;; web-mode-css-indent-offset 2
-;; web-mode-code-indent-offset 2
-;; web-mode-attr-indent-offset 2
 (defun dotspacemacs/user-init ()
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init', before layer configuration
@@ -340,11 +327,6 @@ This function is called at the very end of Spacemacs initialization after
   (setq mode-require-final-newline t)
 
   (my-setup-indent 2)
-
-  ;; (with-eval-after-load 'web-mode
-  ;;   (add-to-list 'web-mode-indentation-params '("lineup-args" . nil))
-  ;;   (add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
-  ;;   (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil)))
 
   (add-to-list 'yas-snippet-dirs "~/repos/yasnippet-snippets")
   (add-to-list 'yas-snippet-dirs "~/.emacs.d/private/snippets")
