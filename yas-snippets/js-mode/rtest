@@ -1,0 +1,17 @@
+/* eslint-env jest */
+import React from "react"
+import $1 from "./$2"
+import {mount, render, shallow} from "enzyme"
+
+/* eslint-disable react/jsx-no-bind */
+
+const Wrapped$1 = props => (
+  <$1
+    {...props} />
+)
+
+it("renders", () => {
+  const component = render(<Wrapped$1 />)
+
+  expect(component.text()).toContain("")
+})

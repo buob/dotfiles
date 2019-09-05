@@ -13,7 +13,7 @@
 [push]
 	default = current
 [alias]
-	tree = log --graph --all --decorate --pretty=oneline --abbrev-commit
+	tree = log --graph --all --decorate --pretty=format:'%C(bold cyan)%h%Creset -%C(bold yellow)%d%Creset %s %C(bold green)(%cr) %C(bold red)<%an>%Creset' --abbrev-commit --date=relative
 	amend = commit -a --amend -C head
 [rebase]
 	autosquash = true
